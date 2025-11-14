@@ -1,0 +1,316 @@
+---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 2025-11-02 20:39:05
+Description: Ticking entity
+
+java.lang.ClassCastException: class net.minecraft.world.item.AirItem cannot be cast to class com.oblivioussp.spartanweaponry.api.IWeaponTraitContainer (net.minecraft.world.item.AirItem is in module minecraft@1.19.2 of loader 'TRANSFORMER' @7a65c995; com.oblivioussp.spartanweaponry.api.IWeaponTraitContainer is in module spartanweaponry@3.0.7 of loader 'TRANSFORMER' @7a65c995)
+	at com.oblivioussp.spartanweaponry.event.CommonEventHandler.redirect$zjb000$spartantoolkit_onLivingHurtTaken(CommonEventHandler.java:907) ~[SpartanWeaponry-1.19.2-3.0.7-all.jar%23343!/:1.19.2-3.0.7] {re:mixin,re:classloading,pl:mixin:A}
+	at com.oblivioussp.spartanweaponry.event.CommonEventHandler.onLivingHurt(CommonEventHandler.java:156) ~[SpartanWeaponry-1.19.2-3.0.7-all.jar%23343!/:1.19.2-3.0.7] {re:mixin,re:classloading,pl:mixin:A}
+	at com.oblivioussp.spartanweaponry.event.__CommonEventHandler_onLivingHurt_LivingHurtEvent.invoke(.dynamic) ~[SpartanWeaponry-1.19.2-3.0.7-all.jar%23343!/:1.19.2-3.0.7] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%2352!/:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingHurt(ForgeHooks.java:343) ~[forge-1.19.2-43.5.0-universal.jar%23367!/:?] {re:mixin,re:classloading,pl:mixin:APP:apotheosis.mixins.json:ForgeHooksMixin,pl:mixin:APP:reviveme.mixins.json:ForgeHooksMixin,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_6475_(LivingEntity.java:1578) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_6469_(LivingEntity.java:1073) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.monster.Zombie.m_6469_(Zombie.java:266) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,re:classloading,pl:mixin:APP:spartanweaponry.mixins.json:ZombieMixin,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_7327_(Mob.java:1364) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.m_6739_(MeleeAttackGoal.java:147) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:classloading,re:mixin}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.m_8037_(MeleeAttackGoal.java:138) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:classloading,re:mixin}
+	at net.minecraft.world.entity.ai.goal.WrappedGoal.m_8037_(WrappedGoal.java:65) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,re:classloading}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.m_186081_(GoalSelector.java:119) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:improvedmobs.mixins.json:GoalSelectorMixin,pl:mixin:A}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.m_25373_(GoalSelector.java:110) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:improvedmobs.mixins.json:GoalSelectorMixin,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_6140_(Mob.java:725) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_8107_(LivingEntity.java:2546) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_8107_(Mob.java:517) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.world.entity.monster.Monster.m_8107_(Monster.java:42) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,re:classloading,pl:mixin:APP:saturn.mixins.json:allocations.fall_sounds.MonsterMixin,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_8119_(LivingEntity.java:2291) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_8119_(Mob.java:318) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_8647_(ServerLevel.java:659) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+	at net.minecraft.world.level.Level.m_46653_(Level.java:457) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:citadel.mixins.json:LevelMixin,pl:mixin:APP:sereneseasons.mixins.json:MixinLevel,pl:mixin:APP:starlight.mixins.json:common.world.LevelMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_184063_(ServerLevel.java:323) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+	at net.minecraft.world.level.entity.EntityTickList.m_156910_(EntityTickList.java:54) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.m_8793_(ServerLevel.java:303) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_5703_(MinecraftServer.java:866) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.dedicated.DedicatedServer.m_5703_(DedicatedServer.java:292) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:806) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:654) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:244) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {re:mixin}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mods: 
+	Spartan Weaponry Addon Toolkit (spartantoolkit), Version: 1.3.0
+		Issue tracker URL: https://github.com/KreloX/SpartanToolkit/issues
+		Mixin class: krelox.spartantoolkit.mixin.CommonEventHandlerMixin
+		Target: com.oblivioussp.spartanweaponry.event.CommonEventHandler
+		at TRANSFORMER/spartanweaponry@3.0.7/com.oblivioussp.spartanweaponry.event.CommonEventHandler.redirect$zjb000$spartantoolkit_onLivingHurtTaken(CommonEventHandler.java:907)
+
+	Spartan Weaponry (spartanweaponry), Version: 3.0.7
+		Issue tracker URL: https://github.com/ObliviousSpartan/SpartanWeaponry/issues
+		at TRANSFORMER/spartanweaponry@3.0.7/com.oblivioussp.spartanweaponry.event.CommonEventHandler.redirect$zjb000$spartantoolkit_onLivingHurtTaken(CommonEventHandler.java:907)
+Stacktrace:
+	at com.oblivioussp.spartanweaponry.event.CommonEventHandler.redirect$zjb000$spartantoolkit_onLivingHurtTaken(CommonEventHandler.java:907) ~[SpartanWeaponry-1.19.2-3.0.7-all.jar%23343!/:1.19.2-3.0.7] {re:mixin,re:classloading,pl:mixin:A}
+	at com.oblivioussp.spartanweaponry.event.CommonEventHandler.onLivingHurt(CommonEventHandler.java:156) ~[SpartanWeaponry-1.19.2-3.0.7-all.jar%23343!/:1.19.2-3.0.7] {re:mixin,re:classloading,pl:mixin:A}
+	at com.oblivioussp.spartanweaponry.event.__CommonEventHandler_onLivingHurt_LivingHurtEvent.invoke(.dynamic) ~[SpartanWeaponry-1.19.2-3.0.7-all.jar%23343!/:1.19.2-3.0.7] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.3.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.3.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.3.jar%2352!/:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingHurt(ForgeHooks.java:343) ~[forge-1.19.2-43.5.0-universal.jar%23367!/:?] {re:mixin,re:classloading,pl:mixin:APP:apotheosis.mixins.json:ForgeHooksMixin,pl:mixin:APP:reviveme.mixins.json:ForgeHooksMixin,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_6475_(LivingEntity.java:1578) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_6469_(LivingEntity.java:1073) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.monster.Zombie.m_6469_(Zombie.java:266) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,re:classloading,pl:mixin:APP:spartanweaponry.mixins.json:ZombieMixin,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_7327_(Mob.java:1364) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.m_6739_(MeleeAttackGoal.java:147) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:classloading,re:mixin}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.m_8037_(MeleeAttackGoal.java:138) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:classloading,re:mixin}
+	at net.minecraft.world.entity.ai.goal.WrappedGoal.m_8037_(WrappedGoal.java:65) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,re:classloading}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.m_186081_(GoalSelector.java:119) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:improvedmobs.mixins.json:GoalSelectorMixin,pl:mixin:A}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.m_25373_(GoalSelector.java:110) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:improvedmobs.mixins.json:GoalSelectorMixin,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_6140_(Mob.java:725) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_8107_(LivingEntity.java:2546) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_8107_(Mob.java:517) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.world.entity.monster.Monster.m_8107_(Monster.java:42) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,re:classloading,pl:mixin:APP:saturn.mixins.json:allocations.fall_sounds.MonsterMixin,pl:mixin:A}
+	at net.minecraft.world.entity.LivingEntity.m_8119_(LivingEntity.java:2291) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:A}
+	at net.minecraft.world.entity.Mob.m_8119_(Mob.java:318) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:entity.AccessorMob,pl:mixin:APP:immersive_armors.mixins.json:MobEntityMixin,pl:mixin:APP:spartanweaponry.mixins.json:MobMixin,pl:mixin:APP:improvedmobs.mixins.json:MobEntityMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_8647_(ServerLevel.java:659) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+	at net.minecraft.world.level.Level.m_46653_(Level.java:457) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:citadel.mixins.json:LevelMixin,pl:mixin:APP:sereneseasons.mixins.json:MixinLevel,pl:mixin:APP:starlight.mixins.json:common.world.LevelMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_184063_(ServerLevel.java:323) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+	at net.minecraft.world.level.entity.EntityTickList.m_156910_(EntityTickList.java:54) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.m_8793_(ServerLevel.java:303) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+-- Entity being ticked --
+Details:
+	Entity Type: born_in_chaos_v1:corpse_fish (net.mcreator.borninchaosv.entity.CorpseFishEntity)
+	Entity ID: 48250
+	Entity Name: Corpse Fish
+	Entity's Exact location: -394.01, 47.06, -497.51
+	Entity's Block location: World: (-395,47,-498), Section: (at 5,15,14 in -25,2,-32; chunk contains blocks -400,-64,-512 to -385,319,-497), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,-64,-512 to -1,319,-1)
+	Entity's Momentum: 0.30, -0.01, -0.14
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.world.level.Level.m_46653_(Level.java:457) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:citadel.mixins.json:LevelMixin,pl:mixin:APP:sereneseasons.mixins.json:MixinLevel,pl:mixin:APP:starlight.mixins.json:common.world.LevelMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_184063_(ServerLevel.java:323) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+	at net.minecraft.world.level.entity.EntityTickList.m_156910_(EntityTickList.java:54) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.m_8793_(ServerLevel.java:303) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,re:classloading,pl:accesstransformer:B,xf:fml:sereneseasons:temperature_transformer,pl:mixin:APP:cupboard.mixins.json:ServerAddEntityMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:bugfix.chunk_deadlock.ServerLevelMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.cache_strongholds.ServerLevelMixin,pl:mixin:APP:krypton.mixins.json:server.fastchunkentityaccess.ServerWorldMixin,pl:mixin:APP:starlight.mixins.json:common.world.ServerWorldMixin,pl:mixin:APP:sound_physics_remastered.mixins.json:ServerWorldMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_5703_(MinecraftServer.java:866) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.dedicated.DedicatedServer.m_5703_(DedicatedServer.java:292) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:806) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:654) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:244) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {re:mixin}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayer['ArukuSenpai'/98, l='ServerLevel[world]', x=-360.63, y=111.00, z=-418.72]]
+	Chunk stats: 4085
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,70,0), Section: (at 0,6,0 in 0,4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 592872 game time, 726364 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 23290 (now: false), thunder time: 5569 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.m_5703_(MinecraftServer.java:866) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.dedicated.DedicatedServer.m_5703_(DedicatedServer.java:292) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:806) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:654) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:244) ~[server-1.19.2-20220805.130853-srg.jar%23362!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:saturn.mixins.json:allocations.server_directory.MinecraftServerMixin,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:core.MinecraftServerMixin,pl:mixin:APP:modernfix-common.mixins.json:perf.dedicated_reload_executor.MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {re:mixin}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Linux (amd64) version 6.8.0-1030-azure
+	Java Version: 17.0.16, Ubuntu
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Ubuntu
+	Memory: 627473744 bytes (598 MiB) / 2743074816 bytes (2616 MiB) up to 12884901888 bytes (12288 MiB)
+	CPUs: 4
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD EPYC 7763 64-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 1 Stepping 1
+	Microarchitecture: Zen 3
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 4
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 7997.99
+	Virtual memory used (MB): 6064.93
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xms2G -Xmx12G
+	Server Running: true
+	Player Count: 2 / 20; [ServerPlayer['ArukuSenpai'/98, l='ServerLevel[world]', x=-360.63, y=111.00, z=-418.72], ServerPlayer['vrayiRAX'/25706, l='ServerLevel[world]', x=-43.20, y=69.00, z=16.14]]
+	Data Packs: vanilla, mod:forge, mod:saturn, mod:dynamiclightsreforged (incompatible), mod:treechop (incompatible), mod:playeranimator (incompatible), mod:siren_head, mod:incontrol (incompatible), mod:the_intruder, mod:sophisticatedcore (incompatible), mod:enhancedvisuals, mod:controlling (incompatible), mod:placebo (incompatible), mod:modernfix (incompatible), mod:citadel, mod:alexsmobs (incompatible), mod:mcwstairs (incompatible), mod:mixinextras (incompatible), mod:bookshelf (incompatible), mod:sophisticatedbackpacks (incompatible), mod:apotheosis (incompatible), mod:balm (incompatible), mod:immersive_armors (incompatible), mod:carryon (incompatible), mod:biggerstacks (incompatible), mod:jeresources, mod:steve_dweller, mod:cameraoverhaul (incompatible), mod:cloth_config (incompatible), mod:konkrete (incompatible), mod:corpse (incompatible), mod:tenshilib (incompatible), mod:ambientsounds, mod:born_in_chaos_v1, mod:highlighter (incompatible), mod:spark (incompatible), mod:spartantoolkit (incompatible), mod:curios, mod:patchouli (incompatible), mod:rightclickharvest (incompatible), mod:man, mod:collective, mod:betterthirdperson, mod:elevatorid (incompatible), mod:eatinganimation (incompatible), mod:spartanweaponry, mod:inventoryprofilesnext (incompatible), mod:cfm (incompatible), mod:architectury (incompatible), mod:justhammers (incompatible), mod:cupboard (incompatible), mod:jadeaddons (incompatible), mod:framework (incompatible), mod:krypton (incompatible), mod:puffish_attributes (incompatible), mod:t_and_t, mod:scalinghealth (incompatible), mod:veinmining, mod:darkmodeeverywhere (incompatible), mod:puffish_skills, mod:mowziesmobs (incompatible), mod:geckolib3 (incompatible), mod:cave_dweller, mod:scary_skinwalker, mod:mimicer, mod:jeg (incompatible), mod:jei (incompatible), mod:configlibtxf (incompatible), mod:waystones (incompatible), mod:clumps (incompatible), mod:journeymap (incompatible), mod:comforts, mod:sereneseasons, mod:sereneseasonsfix (incompatible), mod:mimic_dweller, mod:snowundertrees, mod:lazydfu (incompatible), mod:starlight (incompatible), mod:walljump (incompatible), mod:corpsecurioscompat (incompatible), mod:watut (incompatible), mod:sos_organ_museum, mod:mythicmounts, mod:mteg (incompatible), mod:boh, mod:emotecraft (incompatible), mod:dungeons_arise, mod:sons_of_sins, mod:sound_physics_remastered (incompatible), mod:libipn (incompatible), mod:enchdesc (incompatible), mod:bettercombat (incompatible), mod:goatman, mod:silentlib (incompatible), mod:jade (incompatible), mod:creativecore, mod:watching (incompatible), mod:vivilly_dweller, mod:spectrelib (incompatible), mod:invocore (incompatible), mod:kotlinforforge (incompatible), mod:whisperwoods (incompatible), mod:iceberg (incompatible), mod:spartanshields, mod:reviveme (incompatible), mod:fastbench (incompatible), mod:entityculling, mod:immediatelyfast (incompatible), mod:coroutil (incompatible), mod:appleskin, mod:lootr (incompatible), mod:ferritecore (incompatible), mod:solcarrot (incompatible), mod:the_masked, mod:justzoom (incompatible), mod:improvedmobs (incompatible), mod:cosmeticarmorreworked (incompatible), mod:healingcampfire, mod:sackman, mod:corpse_stalker, mod:presencefootsteps, file/default_skill_trees-1.1.zip (incompatible), file/dynamiclights-v1.9-mc1.17-1.21.9-datapack.zip (incompatible), file/spawnanimations-v1.11.2-mc1.17-1.21.10-datapack.zip (incompatible), t_and_t_waystones_patch_1.19.2.zip, mod:securitycraft, mod:rake_the_arrival, mod:midnightlurker, mod:krampus, mod:monkey_dweller, mod:mokey, mod:jacky, mod:cartoon_dog, mod:apollyon
+	World Generation: Experimental
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
+	ModLauncher: 10.0.8+10.0.8+main.0ef7e830
+	ModLauncher launch target: forgeserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.5.0.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.8.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+		kotlinforforge@3.12.0
+		lowcodefml@null
+	Mod List: 
+		saturn-mc1.19.2-0.1.4.jar                         |Saturn                        |saturn                        |0.1.4               |DONE      |Manifest: NOSIGNATURE
+		dynamiclightsreforged-1.19.2_v1.4.0.jar           |Rubidium Dynamic Lights       |dynamiclightsreforged         |1.19.2_v1.4.0       |DONE      |Manifest: NOSIGNATURE
+		TreeChop-1.19.2-forge-0.19.1.jar                  |HT's TreeChop                 |treechop                      |0.19.0              |DONE      |Manifest: NOSIGNATURE
+		player-animation-lib-forge-1.0.2.jar              |Player Animator               |playeranimator                |1.0.2               |DONE      |Manifest: NOSIGNATURE
+		Siren_Head_v1.2.7-1.19.2-Requires_Geckolib.jar    |Siren Head                    |siren_head                    |1.2.7               |DONE      |Manifest: NOSIGNATURE
+		incontrol-1.19-7.1.18.jar                         |InControl                     |incontrol                     |1.19-7.1.18         |DONE      |Manifest: NOSIGNATURE
+		The_Intruder-1.19.2-1.4.0_Beta.jar                |The Intruder                  |the_intruder                  |1.4.0               |DONE      |Manifest: NOSIGNATURE
+		sophisticatedcore-1.19.2-0.6.4.730.jar            |Sophisticated Core            |sophisticatedcore             |1.19.2-0.6.4.730    |DONE      |Manifest: NOSIGNATURE
+		RakeArrival-forge-1.19.2-1.7.jar                  |Rake: The Arrival             |rake_the_arrival              |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		EnhancedVisuals_FORGE_v1.5.11_mc1.19.2.jar        |EnhancedVisuals               |enhancedvisuals               |1.5.11              |DONE      |Manifest: NOSIGNATURE
+		Controlling-forge-1.19.2-10.0+7.jar               |Controlling                   |controlling                   |10.0+7              |DONE      |Manifest: NOSIGNATURE
+		Placebo-1.19.2-7.4.1.jar                          |Placebo                       |placebo                       |7.4.1               |DONE      |Manifest: NOSIGNATURE
+		modernfix-forge-5.18.1+mc1.19.2.jar               |ModernFix                     |modernfix                     |5.18.1+mc1.19.2     |DONE      |Manifest: NOSIGNATURE
+		citadel-2.1.4-1.19.jar                            |Citadel                       |citadel                       |2.1.4               |DONE      |Manifest: NOSIGNATURE
+		alexsmobs-1.21.1.jar                              |Alex's Mobs                   |alexsmobs                     |1.21.1              |DONE      |Manifest: NOSIGNATURE
+		mcw-stairs-1.0.1-1.19.2forge.jar                  |Macaw's Stairs and Balconies  |mcwstairs                     |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		mixinextras-forge-0.2.0-beta.6.jar                |MixinExtras                   |mixinextras                   |0.2.0-beta.6        |DONE      |Manifest: NOSIGNATURE
+		Bookshelf-Forge-1.19.2-16.3.20.jar                |Bookshelf                     |bookshelf                     |16.3.20             |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		sophisticatedbackpacks-1.19.2-3.20.2.1035.jar     |Sophisticated Backpacks       |sophisticatedbackpacks        |1.19.2-3.20.2.1035  |DONE      |Manifest: NOSIGNATURE
+		Apotheosis-1.19.2-6.5.2.jar                       |Apotheosis                    |apotheosis                    |6.5.2               |DONE      |Manifest: NOSIGNATURE
+		balm-forge-1.19.2-4.6.0.jar                       |Balm                          |balm                          |4.6.0               |DONE      |Manifest: NOSIGNATURE
+		immersive_armors-1.5.6+1.19.2-forge.jar           |Immersive Armors              |immersive_armors              |1.5.6+1.19.2        |DONE      |Manifest: NOSIGNATURE
+		carryon-forge-1.19.2-2.1.2.23.jar                 |Carry On                      |carryon                       |2.1.2.23            |DONE      |Manifest: NOSIGNATURE
+		biggerstacks-1.19.2-3.8.2-all.jar                 |Bigger Stacks                 |biggerstacks                  |1.19.2-3.8.2        |DONE      |Manifest: NOSIGNATURE
+		JustEnoughResources-1.19.2-1.2.3.243.jar          |Just Enough Resources         |jeresources                   |1.2.3.243           |DONE      |Manifest: NOSIGNATURE
+		STEVE_EXE_1.19.2.jar                              |Steve Dweller                 |steve_dweller                 |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		CameraOverhaul-v2.0.4-forge+mc[1.19.0-1.19.2].jar |CameraOverhaul                |cameraoverhaul                |2.0.4-forge+mc.1.19.|DONE      |Manifest: NOSIGNATURE
+		cloth-config-8.3.134-forge.jar                    |Cloth Config v8 API           |cloth_config                  |8.3.134             |DONE      |Manifest: NOSIGNATURE
+		sound-physics-remastered-forge-1.19.2-1.4.5.jar   |Sound Physics Remastered      |sound_physics_remastered      |1.19.2-1.4.5        |DONE      |Manifest: NOSIGNATURE
+		konkrete_forge_1.8.0_MC_1.19-1.19.2.jar           |Konkrete                      |konkrete                      |1.8.0               |DONE      |Manifest: NOSIGNATURE
+		corpse-forge-1.19.2-1.0.17.jar                    |Corpse                        |corpse                        |1.19.2-1.0.17       |DONE      |Manifest: NOSIGNATURE
+		tenshilib-1.19.2-1.6.15-forge.jar                 |TenshiLib                     |tenshilib                     |1.19.2-1.6.15       |DONE      |Manifest: NOSIGNATURE
+		the_midnight_lurker_3.3.5.jar                     |The Midnight Lurker           |midnightlurker                |3.3.5               |DONE      |Manifest: NOSIGNATURE
+		AmbientSounds_FORGE_v5.3.9_mc1.19.2.jar           |AmbientSounds                 |ambientsounds                 |5.3.9               |DONE      |Manifest: NOSIGNATURE
+		born_in_chaos_[Forge]1.19.2_1.10.1.jar            |Born in Chaos                 |born_in_chaos_v1              |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		Highlighter-1.19.1-1.1.4.jar                      |Highlighter                   |highlighter                   |1.1.4               |DONE      |Manifest: NOSIGNATURE
+		spark-1.10.37-forge.jar                           |spark                         |spark                         |1.10.37             |DONE      |Manifest: NOSIGNATURE
+		spartantoolkit-1.19.2-1.3.0.jar                   |Spartan Weaponry Addon Toolkit|spartantoolkit                |1.3.0               |DONE      |Manifest: NOSIGNATURE
+		curios-forge-1.19.2-5.1.6.4.jar                   |Curios API                    |curios                        |1.19.2-5.1.6.4      |DONE      |Manifest: NOSIGNATURE
+		Patchouli-1.19.2-77.jar                           |Patchouli                     |patchouli                     |1.19.2-77           |DONE      |Manifest: NOSIGNATURE
+		right-click-harvest-3.2.3+1.19.2-forge.jar        |Right Click Harvest           |rightclickharvest             |3.2.3+1.19.2-forge  |DONE      |Manifest: NOSIGNATURE
+		The-Man-From-The-Fog-1.3-1.19.2.jar               |The Man From The Fog          |man                           |1.3                 |DONE      |Manifest: NOSIGNATURE
+		collective-1.19.2-7.64.jar                        |Collective                    |collective                    |7.64                |DONE      |Manifest: NOSIGNATURE
+		BetterThirdPerson-Forge-1.19-1.9.0.jar            |Better Third Person           |betterthirdperson             |1.9.0               |DONE      |Manifest: NOSIGNATURE
+		elevatorid-1.19.2-1.8.10.jar                      |Elevator Mod                  |elevatorid                    |1.19.2-1.8.10       |DONE      |Manifest: NOSIGNATURE
+		eatinganimation-1.19-3.2.0.jar                    |Eating Animation              |eatinganimation               |3.0.0               |DONE      |Manifest: NOSIGNATURE
+		SpartanWeaponry-1.19.2-3.0.7-all.jar              |Spartan Weaponry              |spartanweaponry               |3.0.7               |DONE      |Manifest: NOSIGNATURE
+		InventoryProfilesNext-forge-1.19-1.10.19.jar      |Inventory Profiles Next       |inventoryprofilesnext         |1.10.19             |DONE      |Manifest: NOSIGNATURE
+		cfm-7.0.0-pre35-1.19.2.jar                        |MrCrayfish's Furniture Mod    |cfm                           |7.0.0-pre35         |DONE      |Manifest: NOSIGNATURE
+		architectury-6.6.92-forge.jar                     |Architectury                  |architectury                  |6.6.92              |DONE      |Manifest: NOSIGNATURE
+		justhammers-forge-1.0.0+mc1.19.2.jar              |Just Hammers                  |justhammers                   |1.0.0+mc1.19.2      |DONE      |Manifest: NOSIGNATURE
+		cupboard-1.19.2-2.6.jar                           |Cupboard utilities            |cupboard                      |1.19.2-2.6          |DONE      |Manifest: NOSIGNATURE
+		JadeAddons-1.19.2-forge-3.6.0.jar                 |Jade Addons                   |jadeaddons                    |3.6.0               |DONE      |Manifest: NOSIGNATURE
+		framework-forge-1.19.2-0.7.12.jar                 |Framework                     |framework                     |0.7.12              |DONE      |Manifest: 0d:78:5f:44:c0:47:0c:8c:e2:63:a3:04:43:d4:12:7d:b0:7c:35:37:dc:40:b1:c1:98:ec:51:eb:3b:3c:45:99
+		KryptonReforged-0.2.1.jar                         |Krypton Reforged              |krypton                       |0.2.1               |DONE      |Manifest: NOSIGNATURE
+		puffish_attributes-0.7.6-1.19.2-forge.jar         |Pufferfish's Attributes       |puffish_attributes            |0.7.6               |DONE      |Manifest: NOSIGNATURE
+		Towns-and-Towers-v.1.10-_FORGE-1.19.2_.jar        |Towns and Towers              |t_and_t                       |1.10                |DONE      |Manifest: NOSIGNATURE
+		ScalingHealth-1.19.2-7.0.1+7.jar                  |Scaling Health                |scalinghealth                 |7.0.1+7             |DONE      |Manifest: NOSIGNATURE
+		veinmining-forge-1.1.2+1.19.2.jar                 |Vein Mining                   |veinmining                    |1.1.2+1.19.2        |DONE      |Manifest: NOSIGNATURE
+		DarkModeEverywhere-1.19.2-1.1.4.jar               |DarkModeEverywhere            |darkmodeeverywhere            |1.19.2-1.1.4        |DONE      |Manifest: NOSIGNATURE
+		puffish_skills-0.16.8-1.19.2-forge.jar            |Pufferfish's Skills           |puffish_skills                |0.16.8              |DONE      |Manifest: NOSIGNATURE
+		mowziesmobs-1.6.3.jar                             |Mowzie's Mobs                 |mowziesmobs                   |1.6.3               |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.19-3.1.40.jar                    |GeckoLib                      |geckolib3                     |3.1.40              |DONE      |Manifest: NOSIGNATURE
+		krampus-1.19.2-1.7.0.jar                          |krampus                       |krampus                       |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		Cave Dweller Reimagined.jar                       |cave_dweller                  |cave_dweller                  |1.6.4               |DONE      |Manifest: NOSIGNATURE
+		Monkey Dweller 0.1-1.19.2.jar                     |monkey_dweller                |monkey_dweller                |0.1                 |DONE      |Manifest: NOSIGNATURE
+		MOKEYneedsGeckoLib.jar                            |mokey                         |mokey                         |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		skinwalker._1.19.2. (1).jar                       |scary_skinwalker              |scary_skinwalker              |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		Jacky V1.jar                                      |jacky                         |jacky                         |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		FrankMimicker.jar                                 |mimicer                       |mimicer                       |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		JustEnoughGuns-0.4.0-1.19.2.jar                   |Just Enough Guns              |jeg                           |0.4.0               |DONE      |Manifest: NOSIGNATURE
+		jei-1.19.2-forge-11.8.1.1034.jar                  |Just Enough Items             |jei                           |11.8.1.1034         |DONE      |Manifest: NOSIGNATURE
+		configlibtxf-2.2.8-forge.jar                      |ConfigLib TXF                 |configlibtxf                  |2.2.8-forge         |DONE      |Manifest: NOSIGNATURE
+		waystones-forge-1.19.2-11.4.2.jar                 |Waystones                     |waystones                     |11.4.2              |DONE      |Manifest: NOSIGNATURE
+		Clumps-forge-1.19.2-9.0.0+14.jar                  |Clumps                        |clumps                        |9.0.0+14            |DONE      |Manifest: NOSIGNATURE
+		journeymap-1.19.2-5.9.8-forge.jar                 |Journeymap                    |journeymap                    |5.9.8               |DONE      |Manifest: NOSIGNATURE
+		comforts-forge-6.0.7+1.19.2.jar                   |Comforts                      |comforts                      |6.0.7+1.19.2        |DONE      |Manifest: NOSIGNATURE
+		SereneSeasons-1.19.2-8.1.0.24.jar                 |Serene Seasons                |sereneseasons                 |0.0NONE             |DONE      |Manifest: NOSIGNATURE
+		sereneseasonsfix-1.19.4-1.1.1.0.jar               |Serene Seasons Fix            |sereneseasonsfix              |1.1.1.0             |DONE      |Manifest: NOSIGNATURE
+		MIMIC_DWELLER_NEW_VISUALS_1.19.2.jar              |Mimic Dweller                 |mimic_dweller                 |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		snowundertrees-1.19.2-1.3.1.jar                   |Snow Under Trees              |snowundertrees                |1.3.1               |DONE      |Manifest: NOSIGNATURE
+		lazydfu-1.19-1.0.2.jar                            |LazyDFU                       |lazydfu                       |0.1.3               |DONE      |Manifest: NOSIGNATURE
+		starlight-1.1.1+forge.cf5b10b.jar                 |Starlight                     |starlight                     |1.1.1+forge.a3aea74 |DONE      |Manifest: NOSIGNATURE
+		walljump-1.19.2-1.3.5-forge.jar                   |Wall-Jump TXF                 |walljump                      |1.19.2-1.3.5-forge  |DONE      |Manifest: NOSIGNATURE
+		corpsecurioscompat-1.18.x-1.20.x-Forge-2.2.2.jar  |corpsecurioscompat            |corpsecurioscompat            |2.2.2               |DONE      |Manifest: NOSIGNATURE
+		watut-forge-1.19.2-1.0.14.jar                     |What Are They Up To           |watut                         |1.19.2-1.0.14       |DONE      |Manifest: NOSIGNATURE
+		organ-museum-1.19.2-Beta.jar                      |Sons of Sins: Organ Museum    |sos_organ_museum              |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		mythicmounts-19.2-7.2.1-forge.jar                 |MythicMounts                  |mythicmounts                  |19.2-7.3-forge      |DONE      |Manifest: NOSIGNATURE
+		forge-1.19.2-43.5.0-universal.jar                 |Forge                         |forge                         |43.5.0              |DONE      |Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
+		M'TEG-1.0.1-1.19.2.jar                            |Mo' Than Enough Guns          |mteg                          |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		BOH_0.0.2.5.jar                                   |Box of Horrors                |boh                           |0.0.2               |DONE      |Manifest: NOSIGNATURE
+		emotecraft-for-MC1.19.2-2.2.5-forge.jar           |Emotecraft                    |emotecraft                    |2.2.5               |DONE      |Manifest: NOSIGNATURE
+		DungeonsArise-1.19.2-2.1.54-release.jar           |When Dungeons Arise           |dungeons_arise                |2.1.54-1.19.2       |DONE      |Manifest: NOSIGNATURE
+		server-1.19.2-20220805.130853-srg.jar             |Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: NOSIGNATURE
+		sons-of-sins-1.19.2-2.1.6.jar                     |Sons of Sins                  |sons_of_sins                  |2.1.6               |DONE      |Manifest: NOSIGNATURE
+		libIPN-forge-1.19-4.0.2.jar                       |libIPN                        |libipn                        |4.0.2               |DONE      |Manifest: NOSIGNATURE
+		EnchantmentDescriptions-Forge-1.19.2-13.0.14.jar  |EnchantmentDescriptions       |enchdesc                      |13.0.14             |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		bettercombat-forge-1.7.1+1.19.jar                 |Better Combat                 |bettercombat                  |1.7.1+1.19          |DONE      |Manifest: NOSIGNATURE
+		The Newest Goatman.jar                            |goatman                       |goatman                       |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		silent-lib-1.19.2-7.0.3.jar                       |Silent Lib                    |silentlib                     |7.0.3               |DONE      |Manifest: NOSIGNATURE
+		Jade-1.19.1-forge-8.9.2.jar                       |Jade                          |jade                          |8.9.2               |DONE      |Manifest: NOSIGNATURE
+		CreativeCore_FORGE_v2.11.28_mc1.19.2.jar          |CreativeCore                  |creativecore                  |2.11.28             |DONE      |Manifest: NOSIGNATURE
+		From-The-Fog-1.19-v1.9.1-Forge-Fabric.jar         |From The Fog                  |watching                      |1.9.1               |DONE      |Manifest: NOSIGNATURE
+		vivilly_dweller-1.19.2-1.7.0.jar                  |vivilly_dweller               |vivilly_dweller               |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		spectrelib-forge-0.12.8+1.19.2.jar                |SpectreLib                    |spectrelib                    |0.12.8+1.19.2       |DONE      |Manifest: NOSIGNATURE
+		invocore-1.19.2-3.3.2.jar                         |Invocore                      |invocore                      |3.3.2               |DONE      |Manifest: NOSIGNATURE
+		cartoon_dog-1.19.2-1.8.0.jar                      |cartoon_dog                   |cartoon_dog                   |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		kffmod-3.12.0.jar                                 |Kotlin For Forge              |kotlinforforge                |3.12.0              |DONE      |Manifest: NOSIGNATURE
+		whisperwoods-1.19-2.1.1-forge.jar                 |Whisperwoods                  |whisperwoods                  |1.19-2.1.1          |DONE      |Manifest: NOSIGNATURE
+		Iceberg-1.19.2-forge-1.1.4.jar                    |Iceberg                       |iceberg                       |1.1.4               |DONE      |Manifest: NOSIGNATURE
+		spartanshields-1.19.2-3.0.1.jar                   |Spartan Shields               |spartanshields                |3.0.1               |DONE      |Manifest: NOSIGNATURE
+		reviveme-1.19.2-3.10.3.jar                        |Revive Me!                    |reviveme                      |3.10.3              |DONE      |Manifest: NOSIGNATURE
+		FastWorkbench-1.19.2-7.1.4.jar                    |Fast Workbench                |fastbench                     |7.1.4               |DONE      |Manifest: NOSIGNATURE
+		[1.19.2] SecurityCraft v1.9.6.1.jar               |SecurityCraft                 |securitycraft                 |1.9.6.1             |DONE      |Manifest: NOSIGNATURE
+		entityculling-forge-1.6.1-mc1.19.2.jar            |EntityCulling                 |entityculling                 |1.6.1               |DONE      |Manifest: NOSIGNATURE
+		Apollyon v1.1.0 (Forge 1.19.2).jar                |Apollyon                      |apollyon                      |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		ImmediatelyFast-Forge-1.4.0+1.19.2.jar            |ImmediatelyFast               |immediatelyfast               |1.4.0+1.19.2        |DONE      |Manifest: NOSIGNATURE
+		coroutil-forge-1.19.2-1.3.6.jar                   |CoroUtil                      |coroutil                      |1.19.2-1.3.6        |DONE      |Manifest: NOSIGNATURE
+		appleskin-forge-mc1.19-2.4.2.jar                  |AppleSkin                     |appleskin                     |2.4.2+mc1.19        |DONE      |Manifest: NOSIGNATURE
+		lootr-forge-1.19-0.4.29.76.jar                    |Lootr                         |lootr                         |0.4.28.75           |DONE      |Manifest: NOSIGNATURE
+		ferritecore-5.0.3-forge.jar                       |Ferrite Core                  |ferritecore                   |5.0.3               |DONE      |Manifest: 41:ce:50:66:d1:a0:05:ce:a1:0e:02:85:9b:46:64:e0:bf:2e:cf:60:30:9a:fe:0c:27:e0:63:66:9a:84:ce:8a
+		SoL-Carrot-1.19.2-1.14.0.jar                      |Spice of Life: Carrot Edition |solcarrot                     |1.19.2-1.14.0       |DONE      |Manifest: NOSIGNATURE
+		the_masked-5.0.0-1.19.2.jar                       |The Masked                    |the_masked                    |5.0.0               |DONE      |Manifest: NOSIGNATURE
+		justzoom_forge_2.1.1_MC_1.19.2.jar                |Just Zoom                     |justzoom                      |2.1.1               |DONE      |Manifest: NOSIGNATURE
+		improvedmobs-1.19-1.11.0-forge.jar                |Improved Mobs Mod             |improvedmobs                  |1.19-1.11.0         |DONE      |Manifest: NOSIGNATURE
+		CosmeticArmorReworked-1.19.2-v1a.jar              |CosmeticArmorReworked         |cosmeticarmorreworked         |1.19.2-v1a          |DONE      |Manifest: 5e:ed:25:99:e4:44:14:c0:dd:89:c1:a9:4c:10:b5:0d:e4:b1:52:50:45:82:13:d8:d0:32:89:67:56:57:01:53
+		healingcampfire-1.19.2-5.3.jar                    |Healing Campfire              |healingcampfire               |5.3                 |DONE      |Manifest: NOSIGNATURE
+		sackman-1.19.2-1.6.5.jar                          |sackman                       |sackman                       |1.6.5               |DONE      |Manifest: NOSIGNATURE
+		corpse_stalker-1.19.2-By FlamcO4.jar              |corpse_stalker                |corpse_stalker                |1.7.0               |DONE      |Manifest: NOSIGNATURE
+		PresenceFootsteps-1.19.2-1.6.4.1-forge.jar        |Presence Footsteps (Forge)    |presencefootsteps             |1.19.2-1.6.4.1      |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: bcac4d82-0cbf-4a0e-8ab7-64363fd9efd1
+	FML: 43.5
+	Forge: net.minecraftforge:43.5.0
